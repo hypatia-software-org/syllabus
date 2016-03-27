@@ -1,0 +1,1306 @@
+<script src="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/highlight.min.js">
+</script>
+<link href="http://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.2.0/styles/default.min.css" rel="stylesheet"/>
+<style>
+ /* COLORS
+ *
+ * Slate Blue: #52656B
+ * Pink: #FF3B77
+ * Green: #CDFF00
+ * White: #fff
+ * Khaki: #B8B89F
+ */
+
+@import url(https://fonts.googleapis.com/css?family=Yeseva+One);
+@import url(https://fonts.googleapis.com/css?family=Merriweather+Sans);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+
+body {
+  color: #000;
+  background-color: #fff;
+  font: 400 32px/1.5 'Merriweather Sans', sans-serif;  /* total row height is 48px */
+  height: 100vh;
+  width: 100vw;
+  perspective: 600;
+}
+
+a:link,
+a:visited {
+  color: #ff3b77;
+}
+
+.next:visited,
+.next {
+  display: inline-block;
+  background-color: #cdff00;
+  color: #000;
+  text-align: center;
+  padding: 0.75rem 20px 0.75rem;
+  border-radius: 4px;
+  box-shadow: 0 5px 0 #000;
+  margin: 3rem 0 1.5rem 0;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.progress {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 1.5rem 60px;
+  background-color: #b8b89f;
+}
+
+section {
+  background: #fff;
+  padding: 3rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  overflow-y: scroll;
+}
+
+section h1 {
+  color: #52656B;
+  font-size: 6rem;
+  font-family: "Yevesa One", cursive;
+  font-weight: bold;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+}
+
+section p {
+  margin-top: 1.5rem;
+}
+
+section ul {
+  margin: 1.5rem 0 1.5rem 3rem;
+}
+
+section + section {
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.5s;
+}
+
+section:target {
+  visibility: visible;
+  opacity: 1;
+  transform-style: preserve-3d;
+  animation: flip 0.5s;
+}
+
+@keyframes flip {
+  from { transform: rotateY(180deg); }
+  to { transform: rotateY(0deg); }
+}
+
+pre code {
+  margin: 1.5rem 0;
+}
+</style>
+<section id="Unit1-intro">
+<progress max="22" value="1">
+</progress>
+<h2>
+ Unit 1 - Installing the development system
+</h2>
+<p>
+ VirtualBox allows you to run a virtual machine no matter what your
+host operating system is (Windows, Mac, Linux).  VirtualBox
+will be used ot run Hypatia Software's FreeBSD virtual machine
+image so that there is a standard system to do development on.
+</p>
+<p>
+ First install VirtualBox.  This will be different depending
+on which host operating system you use.
+</p>
+<p>
+ References:
+</p>
+<ul>
+ <li>
+  <a href="https://www.virtualbox.org/manual/">
+   VirtualBox manual
+  </a>
+ </li>
+ <li>
+  <a href="http://hypatiasoftware.org/developer-image/">
+   Hypatia Software FreeBSD Virtual Image
+  </a>
+ </li>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/">
+   Python Tutorial
+  </a>
+ </li>
+</ul>
+<p>
+ NEXT_SECTION:
+</p>
+<ul>
+ <li>
+  <a href="#Unit1-virtualbox-windows-mac-linux">
+   Unit1-virtualbox-windows-mac-linux
+  </a>
+ </li>
+</ul>
+<a class="next" href="#Unit1-virtualbox-windows-mac-linux">
+ Next Section
+</a>
+</section>
+<section id="Unit1-virtualbox-windows-mac-linux">
+<progress max="22" value="2">
+</progress>
+<h2>
+ Unit1 - VirtualBox (Windows/Mac/Linux)
+</h2>
+<p>
+ To get started, first download the data image we will use:
+</p>
+<ul>
+ <li>
+  <a href="http://cdn.hypatiasoftware.org/hso-dev-image.vdi.zip">
+   Hypatia Software FreeBSD Virtual Data Image
+  </a>
+ </li>
+</ul>
+<p>
+ Uncompress it to a directory and remember where it's located.
+</p>
+<p>
+ Now, go to the
+ <a href="https://www.virtualbox.org/wiki/Downloads">
+  VirtualBox.org
+ </a>
+ website and
+select the appropriate binary from the list provided.  Download and run the VirtualBox program.
+</p>
+<ul>
+ <li>
+  Create a new virtual machine by hitting the 'New' button in the upper left hand corner
+ </li>
+ <li>
+  Choose a name (e.g. 'Sandbox') and make sure to selec the 'Type' as
+  <code>
+   BSD
+  </code>
+  and 'Version' as
+  <code>
+   FreeBSD (64-bit)
+  </code>
+ </li>
+ <li>
+  Select a memory size that your computer can handle (128MB?)
+ </li>
+ <li>
+  Select "Use an existing virtual hard drive file" and when prompted, select the uncompressed Hypatia Software virtual data image.
+ </li>
+ <li>
+  Hit the 'Create' button.
+ </li>
+ <li>
+  There should be a new machine listed to the left with text indicating that it's 'Powered Off'.
+ </li>
+ <li>
+  Highlight the new machine listed on the left and hit the 'Start' button at the top.
+ </li>
+</ul>
+<p>
+ The virtual machine should start to boot up and you're ready to go!
+</p>
+<a class="next" href="#Unit1-pkg">
+ Next Section
+</a>
+</section>
+<section id="Unit1-pkg">
+<progress max="22" value="3">
+</progress>
+<h2>
+ Unit1 - pkg
+</h2>
+<p>
+ <code>
+  pkg
+ </code>
+ is FreeBSD's package management suite.
+</p>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  Search for the package
+  <code>
+   figlet
+  </code>
+ </li>
+ <li>
+  Install the package
+  <code>
+   figlet
+  </code>
+ </li>
+ <li>
+  Run figlet and have it print out "hello"
+ </li>
+ <li>
+  Remove the package figlet
+ </li>
+</ul>
+<a class="next" href="#Unit1-pkg-hint">
+ Next Section
+</a>
+</section>
+<section id="Unit1-pkg-hint">
+<progress max="22" value="4">
+</progress>
+<h2>
+ Unit1 - pkg
+</h2>
+<p>
+ <code>
+  pkg
+ </code>
+ is FreeBSD's package management suite.
+</p>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  Search for the package
+  <code>
+   figlet
+  </code>
+ </li>
+ <li>
+  Install the package
+  <code>
+   figlet
+  </code>
+ </li>
+ <li>
+  Run figlet and have it print out "hello"
+ </li>
+ <li>
+  Remove the package figlet
+ </li>
+</ul>
+<h3>
+ Hints
+</h3>
+<pre><code>~ pkg search figlet
+...
+
+~ sudo pkg install figlet
+...
+
+~ figlet "hello!"
+ _          _ _       _ 
+| |__   ___| | | ___ | |
+| '_ \ / _ \ | |/ _ \| |
+| | | |  __/ | | (_) |_|
+|_| |_|\___|_|_|\___/(_)
+
+
+~ sudo pkg remove figlet
+...
+</code></pre>
+<a class="next" href="#Unit1-zsh">
+ Next Section
+</a>
+</section>
+<section id="Unit1-zsh">
+<progress max="22" value="5">
+</progress>
+<h2>
+ Unit1 - Zsh (oh-my-zsh)
+</h2>
+<p>
+ ?
+</p>
+<a class="next" href="#Unit1-cli">
+ Next Section
+</a>
+</section>
+<section id="Unit1-cli">
+<progress max="22" value="6">
+</progress>
+<h2>
+ Unit1 - Command Line Interface (cli)
+</h2>
+<p>
+ The command line provides a more advanced interface to interact
+with the operating system.  Textual commands are entered in the "shell"
+to issue various operations.
+</p>
+<h3>
+ <strong>
+  Exercises
+ </strong>
+</h3>
+<ul>
+ <li>
+  Create a Python program to print out "Hello Python!" with the text editor and run it from the command line.
+ </li>
+ <li>
+  list a directory
+ </li>
+ <li>
+  show the current directory
+ </li>
+ <li>
+  create a directory
+ </li>
+ <li>
+  go into the newly created directory
+ </li>
+ <li>
+  list the directory with hidden files
+ </li>
+ <li>
+  print something out on the shell
+ </li>
+ <li>
+  put something into a file
+ </li>
+ <li>
+  show contents of file
+ </li>
+ <li>
+  remove a file
+ </li>
+ <li>
+  move a file
+ </li>
+</ul>
+<a class="next" href="#Unit1-cli-hint">
+ Next Section
+</a>
+</section>
+<section id="Unit1-cli-hint">
+<progress max="22" value="7">
+</progress>
+<h2>
+ Unit1 - Command Line Interface (cli)
+</h2>
+<p>
+ The command line provides a more advanced interface to interact
+with the operating system.  Textual commands are entered in the "shell"
+to issue various operations.
+</p>
+<h3>
+ <strong>
+  Exercises
+ </strong>
+</h3>
+<ul>
+ <li>
+  Create a Python program to print out "Hello Python!" with the text editor and run it from the command line.
+ </li>
+ <li>
+  list a directory
+ </li>
+ <li>
+  show the current directory
+ </li>
+ <li>
+  create a directory
+ </li>
+ <li>
+  go into the newly created directory
+ </li>
+ <li>
+  list the directory with hidden files
+ </li>
+ <li>
+  print something out on the shell
+ </li>
+ <li>
+  put something into a file
+ </li>
+ <li>
+  show contents of file
+ </li>
+ <li>
+  remove a file
+ </li>
+ <li>
+  move a file
+ </li>
+</ul>
+<h3>
+ Hints
+</h3>
+<p>
+ Contents of
+ <code>
+  hello_python.py
+ </code>
+ :
+</p>
+<pre><code>~ cat hello_python.py
+print "Hello Python!"
+</code></pre>
+<p>
+ Run
+ <code>
+  hello_python.py
+ </code>
+ :
+</p>
+<pre><code>~ python hello_python.py
+Hello Python!
+</code></pre>
+<p>
+ List a directory:
+</p>
+<pre><code>~ ls
+</code></pre>
+<p>
+ Print the directory:
+</p>
+<pre><code>~ pwd
+</code></pre>
+<p>
+ Make a directory:
+</p>
+<pre><code>~ mkdir sandbox
+</code></pre>
+<p>
+ Go into the newly created
+ <code>
+  sandbox
+ </code>
+ directory:
+</p>
+<pre><code>~ cd sandbox
+</code></pre>
+<p>
+ List the hiddne files in the directory:
+</p>
+<pre><code>~ ls -la
+</code></pre>
+<p>
+ Print out "hello" from the command line:
+</p>
+<pre><code>~ echo hello
+</code></pre>
+<p>
+ Put the "hello" into a file:
+</p>
+<pre><code>~ echo hello &gt; file.txt
+</code></pre>
+<p>
+ Show the contents of the file:
+</p>
+<pre><code>~ cat file.txt
+</code></pre>
+<p>
+ Remove the file:
+</p>
+<pre><code>~ rm file.txt
+</code></pre>
+<p>
+ Move a file:
+</p>
+<pre><code>~ mv ../hello_python.py .
+</code></pre>
+<a class="next" href="#Unit2-basic-types">
+ Next Section
+</a>
+</section>
+<section id="Unit2-basic-types">
+<progress max="22" value="8">
+</progress>
+<h2>
+ Unit2 - Exploring Python (Integers/Strings/Lists)
+</h2>
+<h3>
+ <strong>
+  Excercise
+ </strong>
+</h3>
+<p>
+ In a Python shell:
+</p>
+<ul>
+ <li>
+  Add, subtract, multiply, divide and exponentiate 9 and 3
+ </li>
+ <li>
+  Concatenate "koala" and "bear" with a space in between them
+ </li>
+ <li>
+  Put an integer list into a variable, add the second to the first and store it back into the first element
+ </li>
+ <li>
+  Put a string list into a variable, concatenate the second to the first and store it back into the first element
+ </li>
+ <li>
+  Append two new elements to the back of each list
+ </li>
+ <li>
+  <p>
+   Remove the second and third element to create a new list
+  </p>
+ </li>
+ <li>
+  <p>
+   Make a list with five elements, 'koalas', 'are', 'are', 'arr', 'cute'
+  </p>
+ </li>
+ <li>
+  Extend the list with another list ['and', 'so', 'are', 'sloths']
+ </li>
+ <li>
+  Append the string '!'
+ </li>
+ <li>
+  Count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+ </li>
+ <li>
+  Remove the first element whose value is 'are'
+ </li>
+ <li>
+  Now count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+ </li>
+ <li>
+  Pop the third element
+ </li>
+ <li>
+  <p>
+   Create a string by joining all remaining elements and putting a space in between them
+  </p>
+ </li>
+ <li>
+  <p>
+   Find the index of where the string 'sloths' occurs
+  </p>
+ </li>
+ <li>
+  Create a new list with the third element, the two elements before the element 'sloths', and the element 'sloths'
+ </li>
+ <li>
+  <p>
+   Reverse it and join them into a string with a space separator
+  </p>
+ </li>
+ <li>
+  <p>
+   Create a list [10, 3, 1, 50, 10] and sort it
+  </p>
+ </li>
+ <li>
+  <p>
+   Create a list of lists, one of strings and the other of strings.  Show the third elements in each.
+  </p>
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/introduction.html">
+   Basic Types in Python
+  </a>
+ </li>
+ <li>
+  <a href="https://docs.python.org/2/tutorial/datastructures.html">
+   List Data Structures
+  </a>
+ </li>
+</ul>
+<a class="next" href="#Unit2-basic-types-hint">
+ Next Section
+</a>
+</section>
+<section id="Unit2-basic-types-hint">
+<progress max="22" value="9">
+</progress>
+<h2>
+ Unit2 - Exploring Python (Integers/Strings/Lists)
+</h2>
+<h3>
+ <strong>
+  Excercise
+ </strong>
+</h3>
+<p>
+ In a Python shell:
+</p>
+<ul>
+ <li>
+  Add, subtract, multiply, divide and exponentiate 9 and 3
+ </li>
+ <li>
+  Concatenate "koala" and "bear" with a space in between them
+ </li>
+ <li>
+  Put an integer list into a variable, add the second to the first and store it back into the first element
+ </li>
+ <li>
+  Put a string list into a variable, concatenate the second to the first and store it back into the first element
+ </li>
+ <li>
+  Append two new elements to the back of each list
+ </li>
+ <li>
+  <p>
+   Remove the second and third element to create a new list
+  </p>
+ </li>
+ <li>
+  <p>
+   Make a list with five elements, 'koalas', 'are', 'are', 'arr', 'cute'
+  </p>
+ </li>
+ <li>
+  Extend the list with another list ['and', 'so', 'are', 'sloths']
+ </li>
+ <li>
+  Append the string '!'
+ </li>
+ <li>
+  Count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+ </li>
+ <li>
+  Remove the first element whose value is 'are'
+ </li>
+ <li>
+  Now count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+ </li>
+ <li>
+  Pop the third element
+ </li>
+ <li>
+  <p>
+   Create a string by joining all remaining elements and putting a space in between them
+  </p>
+ </li>
+ <li>
+  <p>
+   Find the index of where the string 'sloths' occurs
+  </p>
+ </li>
+ <li>
+  Create a new list with the third element, the two elements before the element 'sloths', and the element 'sloths'
+ </li>
+ <li>
+  <p>
+   Reverse it and join them into a string with a space separator
+  </p>
+ </li>
+ <li>
+  <p>
+   Create a list [10, 3, 1, 50, 10] and sort it
+  </p>
+ </li>
+ <li>
+  <p>
+   Create a list of lists, one of strings and the other of strings.  Show the third elements in each.
+  </p>
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/introduction.html">
+   Basic Types in Python
+  </a>
+ </li>
+ <li>
+  <a href="https://docs.python.org/2/tutorial/datastructures.html">
+   List Data Structures
+  </a>
+ </li>
+</ul>
+<h3>
+ <strong>
+  Hint
+ </strong>
+</h3>
+<p>
+ Add, subtract, multiply, divide and exponentiate 9 and 3
+</p>
+<pre><code>&gt;&gt;&gt; 3**5
+243
+&gt;&gt;&gt; 9+3
+12
+&gt;&gt;&gt; 9 - 3
+6
+&gt;&gt;&gt; 9 *3
+27
+&gt;&gt;&gt; 9/3
+3
+&gt;&gt;&gt; 9**3
+729
+</code></pre>
+<p>
+ Find the quotient of 12512501 and 19761.  Find the remainder (modulo).
+</p>
+<pre><code>&gt;&gt;&gt; numerator = 12512501
+&gt;&gt;&gt; denominator = 19761
+&gt;&gt;&gt; numerator / denominator
+633
+&gt;&gt;&gt; quotient = numerator / denominator
+&gt;&gt;&gt; remainder = numerator % denominator
+&gt;&gt;&gt; print quotient, remainder
+633 3788
+&gt;&gt;&gt; denominator * quotient + remainder
+12512501
+</code></pre>
+<p>
+ Concatenate "koala" and "bear" with a space in between them
+</p>
+<pre><code>&gt;&gt;&gt; "koala" + " " + "bear"
+'koala bear'
+</code></pre>
+<p>
+ Put an integer list into a variable, add the second to the first and store it back into the first element
+</p>
+<pre><code>&gt;&gt;&gt; x = [ 2, 3, 5 ]
+&gt;&gt;&gt; x
+[2, 3, 5]
+&gt;&gt;&gt; x[0] = x[0] + x[1]
+&gt;&gt;&gt; x
+[5, 3, 5]
+</code></pre>
+<p>
+ Put a string list into a variable, concatenate the second and third to the first and store it back into the first element
+</p>
+<pre><code>&gt;&gt;&gt; y = [ "koala", " ", "bear" ]
+&gt;&gt;&gt; y
+['koala', ' ', 'bear']
+&gt;&gt;&gt; y[0] = y[0] + y[1] + y[2]
+&gt;&gt;&gt; y
+['koala bear', ' ', 'bear']
+&gt;&gt;&gt; y[0]
+'koala bear'
+</code></pre>
+<p>
+ Append two new elements to the back of each list
+</p>
+<pre><code>&gt;&gt;&gt; y.append('s')
+&gt;&gt;&gt; y.append(' are cute!')
+&gt;&gt;&gt; y
+['koala bear', ' ', 'bear', 's', ' are cute!']
+&gt;&gt;&gt; ' ^-^ '.join(y)
+'koala bear ^-^   ^-^ bear ^-^ s ^-^  are cute!'
+</code></pre>
+<p>
+ Remove the second and third elements
+</p>
+<pre><code>&gt;&gt;&gt; del y[1]
+&gt;&gt;&gt; del y[2]
+&gt;&gt;&gt; y
+['koala bear', 'bear', ' are cute!']
+</code></pre>
+<p>
+ Koalas and sloths:
+</p>
+<pre><code>&gt;&gt;&gt; z = [ 'koalas', 'are', 'are', 'arr', 'cute' ]
+&gt;&gt;&gt; z
+['koalas', 'are', 'are', 'arr', 'cute']
+&gt;&gt;&gt; z.extend(['and', 'so', 'are', 'sloths'])
+&gt;&gt;&gt; z
+['koalas', 'are', 'are', 'arr', 'cute', 'and', 'so', 'are', 'sloths']
+&gt;&gt;&gt; z.append('!')
+&gt;&gt;&gt; z
+['koalas', 'are', 'are', 'arr', 'cute', 'and', 'so', 'are', 'sloths', '!']
+&gt;&gt;&gt; z.count("koalas")
+1
+&gt;&gt;&gt; z.count("sloths")
+1
+&gt;&gt;&gt; z.count("are")
+3
+&gt;&gt;&gt; z.remove('are')
+&gt;&gt;&gt; z
+['koalas', 'are', 'arr', 'cute', 'and', 'so', 'are', 'sloths', '!']
+&gt;&gt;&gt; z.count("are")
+2
+&gt;&gt;&gt; z.pop(2)
+'arr'
+&gt;&gt;&gt; z
+['koalas', 'are', 'cute', 'and', 'so', 'are', 'sloths', '!']
+&gt;&gt;&gt; " ".join(z)
+'koalas are cute and so are sloths !'
+</code></pre>
+<p>
+ Creating new lists, reversing
+</p>
+<pre><code>&gt;&gt;&gt; i = z.index('sloths')
+&gt;&gt;&gt; i
+6
+&gt;&gt;&gt; w = z[2:3] + z[i-2:i+1]
+&gt;&gt;&gt; w
+['cute', 'so', 'are', 'sloths']
+&gt;&gt;&gt; w.reverse()
+&gt;&gt;&gt; w
+['sloths', 'are', 'so', 'cute']
+&gt;&gt;&gt; " ".join(w)
+'sloths are so cute'
+</code></pre>
+<p>
+ Integer list and sorting
+</p>
+<pre><code>&gt;&gt;&gt; t = [10, 3, 1, 50, 10]
+&gt;&gt;&gt; t
+[10, 3, 1, 50, 10]
+&gt;&gt;&gt; t.sort()
+&gt;&gt;&gt; t
+[1, 3, 10, 10, 50]
+</code></pre>
+<p>
+ List of lists:
+</p>
+<pre><code>&gt;&gt;&gt; q = [["cute", "koala", "bears"], [3, 5, 7]]
+&gt;&gt;&gt; q[0]
+['cute', 'koala', 'bears']
+&gt;&gt;&gt; q[1]
+[3, 5, 7]
+&gt;&gt;&gt; q[0][2]
+'bears'
+&gt;&gt;&gt; q[1][2]
+7
+</code></pre>
+<a class="next" href="#Unit3-flow">
+ Next Section
+</a>
+</section>
+<section id="Unit3-flow">
+<progress max="22" value="10">
+</progress>
+<h2>
+ Unit 3 - Flow
+</h2>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" appended to each.
+ </li>
+ <li>
+  <p>
+   For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" if it's a sloth and
+  print "s are kinda cute" if it's a koala.
+  </p>
+ </li>
+ <li>
+  <p>
+   While the list ["koala", "koala", "koala", "sloth", "koala"] is not empty, remove the first element and print it out
+  </p>
+ </li>
+ <li>
+  <p>
+   While the list ["koala", "koala", "koala", "sloth", "koala"] is not empty, remove the first element but only print it out if it's a sloth
+  </p>
+ </li>
+ <li>
+  <p>
+   Print out the numbers from 5 to 111
+  </p>
+ </li>
+ <li>
+  Print out the numbers from 5 to 111 but only if they're divisible by 5 or 3 but not both.
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/controlflow.html">
+   Python tutorial on Control Flow
+  </a>
+ </li>
+</ul>
+<a class="next" href="#Unit3-flow-hint">
+ Next Section
+</a>
+</section>
+<section id="Unit3-flow-hint">
+<progress max="22" value="11">
+</progress>
+<h2>
+ Unit 3 - Flow
+</h2>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" appended to each.
+ </li>
+ <li>
+  <p>
+   For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" if it's a sloth and
+  print "s are kinda cute" if it's a koala.
+  </p>
+ </li>
+ <li>
+  <p>
+   While the list ["koala", "koala", "koala", "sloth", "koala"] is not empty, remove the first element and print it out
+  </p>
+ </li>
+ <li>
+  <p>
+   While the list ["koala", "koala", "koala", "sloth", "koala"] is not empty, remove the first element but only print it out if it's a sloth
+  </p>
+ </li>
+ <li>
+  <p>
+   Print out the numbers from 5 to 111
+  </p>
+ </li>
+ <li>
+  Print out the numbers from 5 to 111 but only if they're divisible by 5 or 3 but not both.
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/controlflow.html">
+   Python tutorial on Control Flow
+  </a>
+ </li>
+</ul>
+<h3>
+ <strong>
+  Hint
+ </strong>
+</h3>
+<pre><code>&gt;&gt;&gt; mylist =  ["koala", "koala", "koala", "sloth", "koala"]
+&gt;&gt;&gt; for v in mylist:
+...     print v + "s are cute!"
+... 
+koalas are cute!
+koalas are cute!
+koalas are cute!
+sloths are cute!
+koalas are cute!
+
+
+&gt;&gt;&gt; mylist = ["koala", "koala", "koala", "sloth", "koala"]
+&gt;&gt;&gt; for v in mylist:
+...     if v == "sloth":
+...         print v + "s are cute!"
+...     elif v == "koala":
+...         print v + "s are kinda cute"
+...     else:
+...         print v + "s are ok"
+... 
+koalas are kinda cute
+koalas are kinda cute
+koalas are kinda cute
+sloths are cute!
+koalas are kinda cute
+
+
+&gt;&gt;&gt; mylist = ["koala", "koala", "koala", "sloth", "koala"]
+&gt;&gt;&gt; while len(mylist) &gt; 0:
+...     v = mylist.pop(0)
+...     print v
+... 
+koala
+koala
+koala
+sloth
+koala
+
+
+&gt;&gt;&gt; mylist = ["koala", "koala", "koala", "sloth", "koala"]
+&gt;&gt;&gt; while len(mylist) &gt; 0:
+...     v = mylist.pop(0)
+...     if v == "sloth":
+...         print v
+... 
+sloth
+
+
+&gt;&gt;&gt; for x in range(5,112):
+...     print x
+... 
+5
+6
+7
+...
+109
+110
+111
+
+
+&gt;&gt;&gt; for x in range(5,112):
+...     if ((x%5) == 0) and ((x%3) == 0):
+...         pass
+...     elif (x%5) == 0:
+...         print x
+...     elif (x%3) == 0:
+...         print x
+... 
+5
+6
+9
+10
+12
+18
+...
+</code></pre>
+<a class="next" href="#Unit4-functions-modules">
+ Next Section
+</a>
+</section>
+<section id="Unit4-functions-modules">
+<progress max="22" value="12">
+</progress>
+<h2>
+ Unit 4 - Functions and Modules
+</h2>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  Write a function to print out "koalas"
+ </li>
+ <li>
+  Write a function that returns "sloths"
+ </li>
+ <li>
+  Write a function that capitalizes the first letter of a string
+ </li>
+ <li>
+  Write a function to square each element in an integer list
+ </li>
+ <li>
+  <p>
+   Write a function to return a new list that has each element squared.
+  </p>
+ </li>
+ <li>
+  <p>
+   Put these in a module and use them
+  </p>
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/controlflow.html#defining-functions">
+   Functions (tutorial)
+  </a>
+ </li>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/modules.html">
+   Modules (tutorial)
+  </a>
+ </li>
+</ul>
+<a class="next" href="#Unit4-functions-modules-hint">
+ Next Section
+</a>
+</section>
+<section id="Unit4-functions-modules-hint">
+<progress max="22" value="13">
+</progress>
+<h2>
+ Unit 4 - Functions and Modules
+</h2>
+<h3>
+ <strong>
+  Exercise
+ </strong>
+</h3>
+<ul>
+ <li>
+  Write a function to print out "koalas"
+ </li>
+ <li>
+  Write a function that returns "sloths"
+ </li>
+ <li>
+  Write a function that capitalizes the first letter of a string
+ </li>
+ <li>
+  Write a function to square each element in an integer list
+ </li>
+ <li>
+  <p>
+   Write a function to return a new list that has each element squared.
+  </p>
+ </li>
+ <li>
+  <p>
+   Put these in a module and use them
+  </p>
+ </li>
+</ul>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/controlflow.html#defining-functions">
+   Functions (tutorial)
+  </a>
+ </li>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/modules.html">
+   Modules (tutorial)
+  </a>
+ </li>
+</ul>
+<h3>
+ <strong>
+  Hints
+ </strong>
+</h3>
+<pre><code>alas():
+    print "koalas"
+
+def sloths():
+    return "sloths"
+
+def capitalize(s):
+    return s[0].upper() + s[1:]
+
+def square_elements(a):
+    for k,v in enumerate(a):
+        a[k] = v*v
+
+def return_square_elements(a):
+    X = []
+    for val in a:
+        X.append(val*val) 
+    return X
+</code></pre>
+<p>
+ Put these into a file called
+ <code>
+  mymodule.py
+ </code>
+ .  Then from another program or interactive
+Python shell:
+</p>
+<pre><code>&gt;&gt;&gt; import mymodule
+&gt;&gt;&gt; mymodule.koalas()
+koalas
+&gt;&gt;&gt; v = mymodule.sloths()
+&gt;&gt;&gt; print v
+sloths
+&gt;&gt;&gt; print mymodule.capitalize("sloths")
+Sloths
+&gt;&gt;&gt; a = [1,2,5,8]
+&gt;&gt;&gt; mymodule.square_elements(a)
+&gt;&gt;&gt; print a
+[1, 4, 25, 64]
+&gt;&gt;&gt; mymodule.return_square_elements([1,2,5,8])
+[1, 4, 25, 64]
+</code></pre>
+<a class="next" href="#Unit5-types-cont">
+ Next Section
+</a>
+</section>
+<section id="Unit5-types-cont">
+<progress max="22" value="14">
+</progress>
+<h2>
+ Unit 5 - Types Continued
+</h2>
+<h3>
+ References
+</h3>
+<ul>
+ <li>
+  <a href="https://docs.python.org/3.3/tutorial/datastructures.html">
+   Data Structures (tutorial)
+  </a>
+ </li>
+</ul>
+<a class="next" href="#Unit6">
+ Next Section
+</a>
+</section>
+<section id="Unit6">
+<progress max="22" value="15">
+</progress>
+<a class="next" href="#Unit7">
+ Next Section
+</a>
+</section>
+<section id="Unit7">
+<progress max="22" value="16">
+</progress>
+<a class="next" href="#Unit8">
+ Next Section
+</a>
+</section>
+<section id="Unit8">
+<progress max="22" value="17">
+</progress>
+<a class="next" href="#Unit9">
+ Next Section
+</a>
+</section>
+<section id="Unit9">
+<progress max="22" value="18">
+</progress>
+<a class="next" href="#Unit10">
+ Next Section
+</a>
+</section>
+<section id="Unit10">
+<progress max="22" value="19">
+</progress>
+<a class="next" href="#Unit11">
+ Next Section
+</a>
+</section>
+<section id="Unit11">
+<progress max="22" value="20">
+</progress>
+<a class="next" href="#Unit12">
+ Next Section
+</a>
+</section>
+<section id="Unit12">
+<progress max="22" value="21">
+</progress>
+<a class="next" href="#Unit13">
+ Next Section
+</a>
+</section>
+<section id="Unit13">
+<progress max="22" value="22">
+</progress>
+</section>
+<script>
+ hljs.initHighlightingOnLoad();
+</script>
