@@ -17,4 +17,7 @@ References:
 
 NEXT_SECTION:
 
-  * Unit1-virtualbox-windows-mac-linux.md
+  * Unit2-basic-types.md
+  * Unit3-flow.md
+  * Unit4-functions-modules.md
+  * Unit5-types-cont.md
