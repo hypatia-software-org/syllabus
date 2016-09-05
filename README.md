@@ -18,3 +18,7 @@ To compile:
 ```
 python adocs.py HSO-Exercises syllabus.html
 ```
+
+## License
+
+MIT (Expat)
