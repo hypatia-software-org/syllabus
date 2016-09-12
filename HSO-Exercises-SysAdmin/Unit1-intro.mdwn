@@ -1,0 +1,10 @@
+Unit 1 - So You want to be a SysAdmin?
+---
+
+Goals for this doucment:
+
+ * Teach FreeBSD sysadmin'ing
+ * Get user's to get a local VM of FreeBSD running
+ * Teach command line basics
+ * Get users to install and admin a webstack/application
+ * Add more please :)
