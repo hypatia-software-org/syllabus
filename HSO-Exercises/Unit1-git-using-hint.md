@@ -1,7 +1,6 @@
 Unit1 - Using Git!
 ----
 
-
 **Your first Commit!**
 
 1) At the command line create a new directory for you git repository:

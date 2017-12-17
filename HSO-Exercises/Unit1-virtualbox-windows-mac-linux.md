@@ -19,3 +19,10 @@ select the appropriate binary from the list provided.  Download and run the Virt
 * Highlight the new machine listed on the left and hit the 'Start' button at the top.
 
 The virtual machine should start to boot up and you're ready to go!
+
+NEXT_SECTION:
+
+  * Unit1-pkg.md
+  * Unit1-cli.md
+  * Unit1-git.md
+  * Unit1-git-using.md
