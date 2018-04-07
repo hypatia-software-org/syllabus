@@ -1,4 +1,4 @@
-Unit1 - Using Git!
+Unit 1 - Using Git!
 ----
 
 **Your first Commit!**

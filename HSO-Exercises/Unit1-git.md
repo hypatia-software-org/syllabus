@@ -1,4 +1,4 @@
-Unit1 - Gitting with Git!
+Unit 1 - Gitting with Git!
 ---
 
 This is the final part of Unit 1 and the last piece of the basic skill set you will need to successfully write your first Python program. So what is *git*? Git is a type of program known as a Version Control System (VCS). A VCS is program that tracks changes in your code and allows you to share your changes with others. Think of git as a tool to "save" your work. The basic functions of git are as follows:

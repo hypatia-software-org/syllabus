@@ -1,4 +1,4 @@
-Unit2 - Exploring Python (Integers/Strings/Lists)
+Unit 2 - Exploring Python (Integers/Strings/Lists)
 ---
 
 ### **Excercise**

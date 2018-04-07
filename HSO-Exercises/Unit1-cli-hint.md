@@ -1,4 +1,4 @@
-Unit1 - Command Line Interface (cli)
+Unit 1 - Command Line Interface (cli)
 ---
 
 The command line provides a more advanced interface to interact

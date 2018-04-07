@@ -1,4 +1,4 @@
-Unit1 - VirtualBox (Windows/Mac/Linux)
+Unit 1 - VirtualBox (Windows/Mac/Linux)
 ---
 
 To get started, first download the data image we will use:
