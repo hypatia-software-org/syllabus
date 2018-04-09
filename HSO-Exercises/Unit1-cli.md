@@ -24,6 +24,7 @@ directory (what is here)
 * `cd DIRECTORY_NANE` - Change Directory to the DIRECTORY_NAME you give (move around)
 * `mkdir DIRECTORY_NAME` - Create a new directory with the name DIRECTORY_NAME
 * `cat FILE_NAME` - Print a file to the screen
+* `rm FILE_NAME` - Remove a file (delete)
 
 ### **Exercises**
 
