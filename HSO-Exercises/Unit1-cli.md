@@ -25,6 +25,7 @@ directory (what is here)
 * `mkdir DIRECTORY_NAME` - Create a new directory with the name DIRECTORY_NAME
 * `cat FILE_NAME` - Print a file to the screen
 * `rm FILE_NAME` - Remove a file (delete)
+* `nano` - A Text Editor that can be used to edit files at the command line
 
 ### **Exercises**
 
