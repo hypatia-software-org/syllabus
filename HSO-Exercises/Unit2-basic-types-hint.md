@@ -31,7 +31,7 @@ In a Python shell:
 
 ### References
 
-* [Basic Types in Python](https://docs.python.org/3.3/tutorial/introduction.html)
+* [Basic Types in Python](https://docs.python.org/3.5/tutorial/introduction.html)
 * [List Data Structures](https://docs.python.org/2/tutorial/datastructures.html)
 
 
@@ -61,7 +61,7 @@ Find the quotient of 12512501 and 19761.  Find the remainder (modulo).
     >>> quotient = numerator / denominator
     >>> remainder = numerator % denominator
     >>> print quotient, remainder
-    633 3788
+    633.5788
     >>> denominator * quotient + remainder
     12512501
 

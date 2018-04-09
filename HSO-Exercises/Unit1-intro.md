@@ -13,7 +13,7 @@ References:
 
 * [VirtualBox manual](https://www.virtualbox.org/manual/)
 * [Hypatia Software FreeBSD Virtual Image](http://hypatiasoftware.org/developer-image/)
-* [Python Tutorial](https://docs.python.org/3.3/tutorial/)
+* [Python Tutorial](https://docs.python.org/3.5/tutorial/)
 
 NEXT_SECTION:
 
