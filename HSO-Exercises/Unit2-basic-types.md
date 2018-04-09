@@ -1,7 +1,7 @@
 Unit 2 - Exploring Python (Integers/Strings/Lists)
 ---
 
-### **Excercise**
+### **Exercise**
 
 In a Python shell:
 
@@ -15,9 +15,9 @@ In a Python shell:
 * Make a list with five elements, 'koalas', 'are', 'are', 'arr', 'cute'
 * Extend the list with another list ['and', 'so', 'are', 'sloths']
 * Append the string '!'
-* Count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+* Count the number of occurrences of the word 'sloths', 'koalas', and the word 'are'
 * Remove the first element whose value is 'are'
-* Now count the number of occurances of the word 'sloths', 'koalas', and the word 'are'
+* Now count the number of occurrences of the word 'sloths', 'koalas', and the word 'are'
 * Pop the third element
 * Create a string by joining all remaining elements and putting a space in between them
 
