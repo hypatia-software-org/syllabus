@@ -1,6 +1,13 @@
 Unit 1 - Using Git!
 ----
 
+From this point forward you will keep all your exercises in a git repository!
+By doing this you can share your progress with your mentor easily. Additionally
+your mentor will be able to provide you with feedback and suggestions via git,
+which will get you acquainted to the way programmers work together in teams!
+
+The next step is to make your first local repository:
+
 **Your first Commit!**
 
 1) At the command line create a new directory for you git repository:
