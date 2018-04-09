@@ -1,4 +1,4 @@
-Unit 4 - Functions and Modules
+Unit 4 - Functions and Modules [HINT]
 ---
 
 ### **Exercise**

@@ -1,4 +1,4 @@
-Unit 1 - pkg
+Unit 1 - pkg [HINT]
 ---
 
 `pkg` is FreeBSD's package management suite.

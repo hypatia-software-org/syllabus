@@ -1,4 +1,4 @@
-Unit 5 - Exploring Python Types part II (HINT)
+Unit 5 - Exploring Python Types part II [HINT]
 ---
 
 ### **Exercises**
