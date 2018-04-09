@@ -31,7 +31,7 @@ In a Python shell:
 
 ### References
 
-* [Basic Types in Python](https://docs.python.org/3.5/tutorial/introduction.html)
+* [Basic Types in Python](https://docs.python.org/3/tutorial/introduction.html)
 * [List Data Structures](https://docs.python.org/2/tutorial/datastructures.html)
 
 

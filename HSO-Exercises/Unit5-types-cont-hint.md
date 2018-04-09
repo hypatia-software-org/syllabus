@@ -14,7 +14,7 @@ In a Python shell:
 
 ### References
 
-* [Data Structures (tutorial)](https://docs.python.org/3.5/tutorial/datastructures.html)
+* [Data Structures (tutorial)](https://docs.python.org/3/tutorial/datastructures.html)
 
 ### Hints
 

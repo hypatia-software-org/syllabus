@@ -16,4 +16,4 @@ Unit 3 - Flow
 
 ### References
 
-* [Python tutorial on Control Flow](https://docs.python.org/3.5/tutorial/controlflow.html)
+* [Python tutorial on Control Flow](https://docs.python.org/3/tutorial/controlflow.html)

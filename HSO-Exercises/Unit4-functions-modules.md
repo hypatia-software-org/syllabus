@@ -14,5 +14,5 @@ Unit 4 - Functions and Modules
 
 ### References
 
-* [Functions (tutorial)](https://docs.python.org/3.5/tutorial/controlflow.html#defining-functions)
-* [Modules (tutorial)](https://docs.python.org/3.5/tutorial/modules.html)
+* [Functions (tutorial)](https://docs.python.org/3/tutorial/controlflow.html#defining-functions)
+* [Modules (tutorial)](https://docs.python.org/3/tutorial/modules.html)
