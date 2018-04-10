@@ -17,6 +17,8 @@ References:
 
 NEXT_SECTION:
 
+  * Unit1-cli.md
+  * Unit1-git.md
   * Unit2-basic-types.md
   * Unit3-flow.md
   * Unit4-functions-modules.md
