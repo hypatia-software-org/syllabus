@@ -1,7 +1,7 @@
-Unit 1 - pkg [HINT]
+Unit 1 - apt-get [HINT]
 ---
 
-`pkg` is FreeBSD's package management suite.
+`apt-get` is Debian's package management suite.
 
 ### **Exercises**
 
@@ -12,10 +12,10 @@ Unit 1 - pkg [HINT]
 
 ### Hints
 
-    ~ pkg search figlet
+    ~ apt-cache search figlet
     ...
 
-    ~ sudo pkg install figlet
+    ~ sudo apt-get install figlet
     ...
 
     ~ figlet "hello!"
@@ -26,5 +26,5 @@ Unit 1 - pkg [HINT]
     |_| |_|\___|_|_|\___/(_)
 
 
-    ~ sudo pkg remove figlet
+    ~ sudo apt-get remove figlet
     ...

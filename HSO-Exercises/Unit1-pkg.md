@@ -1,7 +1,7 @@
 Unit 1 - pkg
 ---
 
-`pkg` is FreeBSD's package management suite.
+`apt-get` is Debian's package management suite.
 
 ### **Exercises**
 

@@ -43,5 +43,5 @@ And thats it! You did it. You should now have your first repository with your fi
 
 ### **Exercises**
 
-* Create a Python program to print out "Hello Python!" with the text editor. Save the file as `hello.py` and then **add** and **commit** it to your repository.
-* Create a new repository on https://github.com and then add the **remote** repository and **push** your repository to it.
+* Create a Python program to print out "Hello Python!" with the text editor. Save the file as `Unit1.py` and then **add** and **commit** it to your repository.
+* Create a new repository on https://github.com named `hypatia-exercises` and then add the **remote** repository and **push** your repository to it.

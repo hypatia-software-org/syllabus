@@ -41,6 +41,8 @@ In a Python shell:
 
 In your `hypatia-exercises` repository:
 
+**NOTE**: For these exercises you will need to *commit* and *push* your work to https://GitHub.com. If you need to brush up on your Git, check out Unit1 where you set up your GitHub account and pushed to your first Repository: Unit1-using-git.md
+
 * Create a new program named `unit6.py` that prints "Exercise 6!" to the screen (make sure you remember to *add*, *commit*, and *push* your work to GitHub!)
 
 
