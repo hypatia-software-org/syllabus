@@ -1,7 +1,7 @@
 Unit 4 - Functions and Modules
 ---
 
-### **Exercise**
+### **Exercises**
 
 * Write a function to print out "koalas"
 * Write a function that returns "sloths"

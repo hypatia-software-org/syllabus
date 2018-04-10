@@ -1,7 +1,7 @@
 Unit 2 - Exploring Python (Integers/Strings/Lists)
 ---
 
-### **Exercise**
+### **Exercises**
 
 In a Python shell:
 

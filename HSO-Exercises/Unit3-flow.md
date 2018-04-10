@@ -1,7 +1,7 @@
 Unit 3 - Flow
 ---
 
-### **Exercise**
+### **Exercises**
 
 * For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" appended to each.
 * For each element in the list ["koala", "koala", "koala", "sloth", "koala"], print it out with the string "s are cute!" if it's a sloth and

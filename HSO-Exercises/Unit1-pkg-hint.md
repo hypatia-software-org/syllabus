@@ -3,7 +3,7 @@ Unit 1 - pkg [HINT]
 
 `pkg` is FreeBSD's package management suite.
 
-### **Exercise**
+### **Exercises**
 
   * Search for the package `figlet`
   * Install the package `figlet`
