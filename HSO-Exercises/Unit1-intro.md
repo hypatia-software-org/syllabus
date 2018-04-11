@@ -9,7 +9,7 @@ image so that there is a standard system to do development on.
 First install VirtualBox.  This will be different depending
 on which host operating system you use.
 
-References:
+### References:
 
 * [VirtualBox manual](https://www.virtualbox.org/manual/)
 * [Hypatia Software FreeBSD Virtual Image](http://hypatiasoftware.org/developer-image/)
