@@ -17,15 +17,11 @@ Unit 1 - Command Line Interface (cli) [HINT]
 
 ### Hints
 
-Contents of `hello_python.py`:
+Use the `man` command to look up how to use the `ls` command's `-a` flag
 
-    ~ cat hello_python.py
-    print "Hello Python!"
+    ~ man ls
 
-Run `hello_python.py`:
-
-    ~ python hello_python.py
-    Hello Python!
+(the -a flag shows hidden files!)
 
 List a directory:
 

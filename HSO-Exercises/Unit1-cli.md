@@ -18,6 +18,7 @@ While navigating your shell there are some basics commands that you
 will need to know to get started (when you see DIRECTORY_NAME or
 FILE_NAME be sure to replace this with the directory of your choice):
 
+* `man` - Display the *manual* for the given command. This is one of the most important commands you will learn today! Use the `man` command to look up how to use other commands, example: `man ls`
 * `pwd` - Show the Present Working Directory that you are currently in (where you are)
 * `ls` - List current files and directories in your current working
 directory (what is here)
@@ -51,14 +52,18 @@ Do this for a while until you feel you have the hang of creating and deleting fi
 
 ### **Exercises**
 
-* Create a Python program to print out "Hello Python!" with the text editor and run it from the command line.
-* list a directory
-* show the current directory
-* create a directory
-* go into the newly created directory
-* list the directory with hidden files
-* print something out on the shell
-* put something into a file
-* show contents of file
-* remove a file
-* move a file
+* Use the `man` command to look up how to use the `ls` command's `-a` flag
+* List a directory
+* Show the current directory
+* Create a directory
+* Go into the newly created directory
+* List the directory with hidden files
+* Print something out on the shell
+* Put something into a file
+* Show contents of file
+* Remove a file
+* Move a file
+
+### **References**
+
+* [Bash Basics](http://folk.ntnu.no/sverrehe/bash/basics.html)
