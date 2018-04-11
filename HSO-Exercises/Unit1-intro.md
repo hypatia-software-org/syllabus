@@ -14,12 +14,3 @@ on which host operating system you use.
 * [VirtualBox manual](https://www.virtualbox.org/manual/)
 * [Hypatia Software FreeBSD Virtual Image](http://hypatiasoftware.org/developer-image/)
 * [Python Tutorial](https://docs.python.org/3/tutorial/)
-
-NEXT_SECTION:
-
-  * Unit1-cli.md
-  * Unit1-git.md
-  * Unit2-basic-types.md
-  * Unit3-flow.md
-  * Unit4-functions-modules.md
-  * Unit5-types-cont.md
