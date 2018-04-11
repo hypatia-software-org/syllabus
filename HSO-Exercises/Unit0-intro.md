@@ -13,3 +13,5 @@ you way though the units and sub-units:
 If at any time you get stuck or lost, contact your mentor! Do not be afraid to ask questions, the only foolish ones are those we wait too long to ask.
 
 Also remember to make use of the #learning channel on Slack. This is a great place to ask for help if you would like more generic feedback from the group.
+
+If you encouter errors while working with this Syllabus please report them on our bug tracker found [here on GitHub!](https://github.com/hypatia-software-org/syllabus/issues)
