@@ -27,6 +27,28 @@ directory (what is here)
 * `rm FILE_NAME` - Remove a file (delete)
 * `nano` - A Text Editor that can be used to edit files at the command line
 
+**WARNING**: Using commands like `rm -rf` can delete large parts of your filesystem if you are not careful. Always double check your command before typing it. If you are unsure of yourself, use `rm -ri` instead so that `rm` will confirm the filename with you before deleting it.
+
+Patrice creating and deleting files and directories:
+
+     hypatian@hypatia:~$ mkdir testing
+     hypatian@hypatia:~/testing$ cd testing
+     hypatian@hypatia:~/testing$ mkdir dir1 dir2 dir3
+     hypatian@hypatia:~/testing$ ls
+     dir1 dir2 dir3
+     hypatian@hypatia:~/testing$ rm -rf dir2
+     hypatian@hypatia:~/testing$ ls
+     dir1 dir3
+
+When you are done clean up your testing directory:
+
+     hypatian@hypatia:~/testing$ pwd
+     /home/hypatian/testing
+     hypatian@hypatia:~$ cd ..
+     hypatian@hypatia:~$ rm -rf testing
+
+Do this for a while until you feel you have the hang of creating and deleting files and directories. Be sure you understand how to navigate files and directories at the shell before moving on.
+
 ### **Exercises**
 
 * Create a Python program to print out "Hello Python!" with the text editor and run it from the command line.

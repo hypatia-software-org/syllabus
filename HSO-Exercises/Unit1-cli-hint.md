@@ -1,10 +1,6 @@
+
 Unit 1 - Command Line Interface (cli) [HINT]
 ---
-
-The command line provides a more advanced interface to interact
-with the operating system.  Textual commands are entered in the "shell"
-to issue various operations.
-
 ### **Exercises**
 
 * Create a Python program to print out "Hello Python!" with the text editor and run it from the command line.
