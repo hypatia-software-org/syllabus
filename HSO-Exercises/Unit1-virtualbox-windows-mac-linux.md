@@ -3,7 +3,7 @@ Unit 1 - VirtualBox (Windows/Mac/Linux)
 
 To get started, first download the data image we will use:
 
-* [Hypatia Software Debian 9 Virtual Data Image](http://cdn.hypatiasoftware.org/hso-dev-image.zip)
+* [Hypatia Software Debian 9 Virtual Data Image](http://cdn3.hypatiasoftware.org/hypatia-dev-image.zip)
 
 Uncompress it to a directory and remember where it's located.
 
