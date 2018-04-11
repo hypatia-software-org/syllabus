@@ -57,4 +57,9 @@ In your `hypatia-exercises` repository:
 * Create a new directory named `unit9-django`.
 * Install a Python virtual environment (make sure to specify python3!) into the `unit9-django` directory.
 * Use the `django-admin` command to start a new project in the `unit9-django' directory.
+* Use `manage.py` to start your development server. Confirm it is running with a web-browser.
 * Add and commit your new project files and push them to your GitHub repository (make sure you do **not** commit your virtual environment!).
+
+### References:
+
+* [Writing your first Django app, part 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/)
