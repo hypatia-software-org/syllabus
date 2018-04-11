@@ -50,5 +50,6 @@ In your `hypatia-exercises` repository:
 * Create a new program named `unit9.py` that does the following: Gets the content of *this* web-page and print it to the screen.
 
 ### References:
+
 * [Python Virtual Environment Guide](http://docs.python-guide.org/en/latest/dev/virtualenvs/)
 * [Python Requests Quickstart Guide](http://www.python-requests.org/en/master/user/quickstart/)
