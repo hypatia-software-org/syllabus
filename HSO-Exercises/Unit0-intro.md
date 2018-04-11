@@ -19,7 +19,7 @@ If you encounter errors while working with this Syllabus please report them on o
 
 NEXT_SECTION:
 
-  * Unit1-virtual-box-windows-mac-linux.md
+  * Unit1-virtualbox-windows-mac-linux.md
   * Unit1-cli.md
   * Unit1-git.md
   * Unit2-basic-types.md
