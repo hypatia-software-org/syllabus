@@ -1,6 +1,22 @@
 Unit 6 - Reading and writing to files
 ----
 
+As part of input and output we will now learn how to read and write to and from from files. Python makes this very ease for us by providing several methods for working with file objects. Lets open our Python shell and `write()` a new file:
+
+    >>> myfile = open('/tmp/testingfile.txt')
+    >>> myfile.write('Writing to a file in python, yay!')
+    >>> myfile.close()
+
+Notice that we must `close()` our file after we are done working with it. We must *always* close our files. Now that we have written a file lets open it and print the contents to the screen:
+
+    >>> myfile = open('/tmp/testingfile.txt')
+    >>> file_contents = myfile.read()
+    >>> myfile.close()
+    >>> print(file_contents)
+    Writing to a file in python, yay!
+
+Pratice it a few times until you get the hang of it. Remember to `close()` your file when you are done reading or writing to it.
+
 ### **Exercises**
 
 In your `hypatia-exercises` repository:
