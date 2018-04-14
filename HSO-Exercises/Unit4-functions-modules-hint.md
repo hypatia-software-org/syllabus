@@ -18,7 +18,7 @@ Unit 4 - Functions and Modules [HINT]
 
 ### **Hints**
 
-    alas():
+    def koalas():
         print "koalas"
 
     def sloths():
